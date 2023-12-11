@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emens | Kontakt</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/tabLogo.png"/>
+    <link rel="stylesheet" href="../css/styleContact.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="left">
+                    <a href="index.html"><img id= "logo" src="../images/header-logo.png" alt="Our logo"><span>emens</span></a>
+            </div>
+            <div class="right">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a class="nav-link" href="features.html">Prednosti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Proizvodi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="company.html">O Nama</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Ponuda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" id="contact">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="landing">
+            <div class="content">
+                <h1>Imate pitanje?
+                    Kontaktirajte nas.
+                </h1>
+            </div>
+            <form action = "php/proccessContact.php" method = "post" enctype = "text/plain">
+                <div class="name">
+                    <label for="name">Ime *</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="surname">
+                    <label for="surname">Prezime *</label>
+                    <input type="text" name="surname" id="surname" required>
+                </div>
+                <div class="email">
+                    <label for="email">Email *</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="industry">
+                    <label for="industry">Industrija *</label>
+                    <input type="text" name="industry" id="industry" required>
+                </div>
+                <div class="about">
+                    <label for="about">Kako vam možemo pomoći?</label>
+                    <textarea name="about" id="about" placeholder="Ovdje napišite svoj upit..." required></textarea>
+                </div>
+                <div class="submit">
+                    <input type="submit" value="Pošalji" id="greenbutton"  style = "font-size:17px">
+                </div>
+                <div class="agreement">
+                    <p>Klikom na “Pošalji”, prihvaćate naš <a href="#">Privacy Policy</a></p>
+                </div>
+            </form>
+        </section>
+       <section id="white"></section>
+    </main>
+
+    <footer>
+        <section id="top">
+            <div class="column emens">
+                <div class="logo">
+                    <a href="index.html"><img id= "logo" src="../images/tabLogo.png" alt="emens logo"><span>emens</span></a>
+                </div>
+                <div class="languages">
+                    <p>English</p>
+                    <p>Hrvatski</p>
+                    <a href="#"><img src="../images/linkedInGreen.png" alt=""></a>
+                    <a href="#"><img src="../images/twitterGreen.png" alt=""></a>
+                    <a href="#"><img src="../images/instagramGreen.png" alt=""></a>
+                </div>
+            </div>
+            <div class="column">
+                <h6>Proizvodi</h6>
+                <p><a href="features.html">Prednosti</a></p>
+                <p><a href="products.html">Ponuda</a></p>
+                <p><a href="demo.html">Zatražite Demo</a></p>
+            </div>
+            <div class="column">
+                <h6>O Nama</h6>
+                <p><a href="company.html">Naš tim</a></p>
+                <p><a  href="company.html">Projekt Koraci</a></p>
+                <p><a  href="contact.html">Kontakt</a></p>
+                <p><a  href="termsandconditions.html">Uvjeti i odredbe</a></p>
+                <p><a  href="privacypolicy.html">Politika privatnosti</a></p>
+            </div>
+        </section>
+        <section id="bottom">
+            <div><p>&copy Emens 2023</p></div>
+        </section>
+    </footer>
+    <script src="../js/header.js"></script>
+</body>
+</html>

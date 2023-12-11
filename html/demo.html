@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emens | Demo</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/tabLogo.png"/>
+    <link rel="stylesheet" href="../css/styleDemo.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="left">
+                    <a href="index.html"><img id= "logo" src="../images/header-logo.png" alt="Our logo"><span>emens</span></a>
+            </div>
+            <div class="right">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a class="nav-link" href="features.html">Prednosti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Proizvodi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="company.html">O Nama</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Ponuda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" id="contact">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="landing">
+            <div class="content">
+                <h1>Isprobajte Demo</h1>
+                <h3>Ispunite obrazac i naš tim će vam se javiti što prije. Veselimo se pokazati vam kako naš softver može unaprijediti vaše poslovanje!</h3>
+                <br><br><h2>Saznati ćete kako vam emens može pomoći:</h2>
+                <h3>- Prikupiti podatke potrebne za računanje emisija</h3>
+                <h3>- Izračunati emisije</h3>
+                <h3>- Izvještavati u skladu s regulaicijama</h3>
+            </div>
+            <form action = "php/proccessDemo.php" method = "post" enctype = "text/plain">
+                <div class="name">
+                    <label for="name">Ime *</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="surname">
+                    <label for="surname">Prezime *</label>
+                    <input type="text" name="surname" id="surname" required>
+                </div>
+                <div class="email">
+                    <label for="email">Email *</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="company">
+                    <label for="comapny">Tvrtka *</label>
+                    <input type="text" name="company" id="company" required>
+                </div>
+                <div class="country">
+                    <label for="country">Zemlja *</label>
+                    <input type="text" list="countries" name="country" id="country" required>
+                    <datalist id="countries"></datalist>
+    
+                </div>
+                <div class="employees">
+                    <label for="employees">Broj Zaposlenih *</label>
+                    <select id="employees" name="employees" required>
+                      <option value="blank"></option>
+                      <option value="10">do 10</option>
+                      <option value="50">10 do 50</option>
+                      <option value="200">50 do 200</option>
+                      <option value="500">200 do 500</option>
+                      <option value="plus">od 500</option>
+                    </select>
+                </div>
+                <div class="about">
+                    <label for="about">Recite nam više o svojoj tvrtki.</label>
+                    <textarea name="about" id="about" placeholder="..." required></textarea>
+                </div>
+                <div class="nonprofit">
+                    <input type="checkbox" id="nonprofit"/>
+                    <label for="nonprofit">Mi smo neprofitna organizacija.</label>
+                </div>
+                <div class="submit">
+                    <input type="submit" value="Pošalji" id="greenbutton" style = "font-size:17px">
+                </div>
+                <div class="agreement">
+                    <p>Klikom na “Pošalji”, prihvaćate naš<a href="#">Privacy Policy</a></p>
+                </div>
+            </form>
+        </section>
+       <section id="white"></section>
+    </main>
+
+    <footer>
+        <section id="top">
+            <div class="column emens">
+                <div class="logo">
+                    <a href="index.html"><img id= "logo" src="../images/tabLogo.png" alt="emens logo"><span>emens</span></a>
+                </div>
+                <div class="languages">
+                    <p>English</p>
+                    <p>Hrvatski</p>
+                    <a href="#"><img src="../images/linkedInGreen.png" alt=""></a>
+                    <a href="#"><img src="../images/twitterGreen.png" alt=""></a>
+                    <a href="#"><img src="../images/instagramGreen.png" alt=""></a>
+                </div>
+            </div>
+            <div class="column">
+                <h6>Proizvodi</h6>
+                <p><a href="features.html">Prednosti</a></p>
+                <p><a href="products.html">Ponuda</a></p>
+                <p><a href="demo.html">Zatražite Demo</a></p>
+            </div>
+            <div class="column">
+                <h6>O nmama</h6>
+                <p><a href="company.html">Naš Tim</a></p>
+                <p><a  href="company.html">Projekt Koraci</a></p>
+                <p><a  href="contact.html">Kontakt</a></p>
+                <p><a  href="termsandconditions.html">Uvjeti i odredbe</a></p>
+                <p><a  href="privacypolicy.html">Politika privatnosti</a></p>
+            </div>
+        </section>
+        <section id="bottom">
+            <div><p>&copy Emens 2023</p></div>
+        </section>
+    </footer>    
+    <script>
+        const countryInput = document.getElementById('country-input');
+        const datalist = document.getElementById('countries');
+
+        // Fetch the list of countries from an API
+        fetch('https://restcountries.com/v3.1/all')
+          .then(response => response.json())
+          .then(data => {
+            data.forEach(country => {
+              const option = document.createElement('option');
+              option.value = country.name.common;
+              datalist.appendChild(option);
+            });
+         })
+          .catch(error => console.error(error));
+    </script>
+    <script src="../js/header.js"></script>
+</body>
+</html>

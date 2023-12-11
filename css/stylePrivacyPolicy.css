@@ -1,0 +1,482 @@
+/*Universal Styles*/
+
+:root {
+    --visual-green: #95EA8D;
+    --emens-green:#1b5929; 
+    --emens-grey: hsla(0, 0%, 85%, 1);
+    --nice-green: #a6c2ac;
+    --dark-grey: #8a8a8a;
+    --font-inter: 'Inter', sans-serif;
+    --10-px: 0.625rem;
+    --17-px: 1.0625rem;
+    --18-px: 1.125rem;
+    --19-px: 1.1875rem;
+    --20-px: 1.25rem;
+    --22-px: 1.375rem;
+    --25-px: 1.5625rem;
+    --28-px: 1.75rem;
+    --32-px: 2rem;
+    --40-px: 2.5rem;
+    --50-px: 3.125rem;
+    --60-px: 3.75rem;
+    --72-px: 4.5rem;
+    --80-px: 5rem;
+    --150-px: 9.375rem;
+    --192-px: 12rem;
+    --header-height: 5rem;
+    --logo-font-size: 2.0125rem;
+}
+
+
+html {
+    font-size: 2.5vh;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-inter);
+    color: var(--emens-green);
+    background-color: white;
+    font-weight: 400;
+}
+
+main, footer {
+position: relative;
+   top: var(--header-height);
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.image-container {
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#whitebutton{
+    font-size: var(--17-px);
+    font-weight: 600;
+    background-color: white;
+    color: var(--emens-green);
+    border-radius: var(--10-px);
+    text-align: center;
+    padding: 1.4vh 1.98%;
+    width: 80%;
+    transition: all 250ms ease;
+    border: 2px solid white;
+}
+
+#whitebutton:hover{
+    background-color: inherit;
+    color: white;
+}
+
+#nobutton{
+    font-size: var(--17-px);
+    font-weight: 600;
+    background-color: inherit;
+    color: white;
+    border-radius: var(--10-px);
+    text-align: center;
+    padding: 1.4vh 1.98%;
+    width: 80%;
+    transition: all 250ms ease;
+    border: 2px solid white;
+}
+
+#nobutton:hover{
+    background-color: white;
+    color: var(--emens-green);
+}
+
+#greenbutton{
+    font-size: var(--17-px);
+    font-weight: 600;
+    background-color: var(--emens-green);
+    color: white;
+    border-radius: 10px;
+    border: 2px solid var(--emens-green);
+    padding: 1.4vh 1.98%;
+    width: 80%;
+    transition: all 250ms ease;
+}
+
+#greenbutton:hover{
+    background-color: inherit;
+    color: var(--emens-green);
+}
+
+main {
+    padding-left: 5%;
+    padding-top: 2vh;
+    width: 90%;
+}
+
+p {
+    font-size: 20px; 
+    font-weight: 300;
+    color: black;
+    padding: 1vh 0;
+}
+
+h1 {
+    font-size: 150px; 
+    font-weight: 500;
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+    margin-bottom: 7vh;
+    color: black;
+    border-bottom: 1px solid var(--emens-green);
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 500;
+    color: black;
+    padding-top: 5vh;
+}
+
+h3 {
+    font-size: 50px;
+    font-weight: 500;
+    color: black;
+    padding-top: 4vh;
+}
+
+h4 {  
+    font-size: var(--28-px);
+    font-weight: 500; 
+    color: black;
+    padding-top: 2vh;
+}
+
+h5 {  
+    font-size: var(--20-px);
+    font-weight: 500;
+    color: black;
+}
+
+h6 {
+    font-size: var(--20-px);
+    color: var(--emens-green);
+    font-weight: 400;
+}
+
+li {
+    font-size: 20px; 
+    font-weight: 400;
+    color: black;
+    padding: 1vh 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--emens-green);
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--visual-green);
+    font-weight: 500;
+}
+
+#contact {
+    font-weight: 700;
+}
+
+
+/*header*/
+header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: var(--header-height);
+    font-size: var(--17-px);
+    line-height: normal;
+    overflow: hidden;
+    background-color: white;
+    border-bottom: 2px solid var(--emens-green);
+}
+
+.navbar {
+    height: var(--header-height);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+header .left {
+    margin-top: 2.75vh;
+    font-size: var(--logo-font-size);
+    font-weight: 600;
+    margin-left: 3.64%;
+}
+
+header .right {
+    margin-top: 4.28vh;
+    margin-right: 5.16%;
+}
+
+header .right #greenbutton {
+    padding: 1.4vh 22.94%;
+}
+
+header li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+header .left a:hover {
+    color: var(--emens-green);
+    font-weight: 600;
+}
+
+header span {
+    font-weight: 500;
+    margin-left: 13px;
+}
+
+.navbar img {
+    height: 4.5vh;
+    width: auto;
+    vertical-align: middle;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--emens-green);
+}
+
+@media(max-width: 935px) {
+    header {
+        border-bottom: 1px solid var(--emens-green);
+        height: 4.5rem;
+    }
+    
+    .navbar img {
+        height: 3vh;
+    }
+
+    header span {
+        font-size: smaller;
+    }
+
+    .hamburger {
+        display: block;
+        margin-right: 5.16%;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+   .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 4.5rem;
+        gap: 0;
+        flex-direction: column;
+        text-align: left;
+        background-color: white;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 1.69vh 0;
+        margin-right: 60%;
+    }
+
+    .nav-menu.active {
+        left: 0px;
+    }
+
+    .nav-link { 
+        text-align: left;
+    }
+}
+
+@media(max-width: 935px) {
+    main {
+        margin-left: 8.5%;
+        padding-left: 0;
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    li {
+        font-size: 17px;
+    }
+
+}
+
+
+/*footer*/
+footer {
+   width: 100%;
+   height: auto;
+   background-color: white;
+   color: var(--emens-green); 
+}
+
+footer #top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+    justify-items: center;
+    padding-top: 14.26vh;
+}
+
+footer #top .column {
+    padding-left: 14.79%;
+    border-left: var(--emens-green) solid 1px;
+}
+
+footer #top .column h6 {
+    font-weight: 600;
+    padding-bottom: 2.24vh;
+}
+
+footer #top .column p {
+    margin: 1.43vh 0px;
+}
+
+footer #top .column a {
+    color: var(--emens-green);
+    font-size: var(--20-px);
+}
+
+footer #top .column p :hover {
+    font-weight: 500;
+}
+
+footer #top .emens {
+    border-left: white solid 1px;
+}
+
+footer #top .emens p {
+    font-size: var(--20-px);
+    padding-top: 0.5vh;
+    color: var(--emens-green);
+}
+
+footer #top .emens .languages {
+    margin-top: 3.56vh;
+}
+
+footer #top .emens .languages a img {
+    width: 20px;
+    height: auto;
+    padding-top: 2vh;
+}
+
+
+footer #top .emens .logo span {
+    font-weight: 600;
+    font-size: 32.2px;
+}
+
+
+footer #top .emens img {
+    width: auto;
+    height: 4.5vh;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+footer #top .column #tnc {
+    color: var(--visual-green);
+}
+
+footer #bottom {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 8.35vh;
+    padding-bottom: 4.18vh;
+}
+
+@media(max-width: 935px) {
+    footer {
+        width: 100%;
+        height: auto;
+        background-color: white;
+        color: var(--emens-green); 
+     }
+     
+     footer #top {
+         display: flex;
+         flex-direction: column;
+         padding-top: 10vh;
+     }
+     
+     footer #top .column {
+         padding-left: 8.5%;
+         border-left: var(--emens-green) solid 1px;
+     }
+     
+     footer #top .column h6 {
+        margin-top: 5vh; 
+        font-size: smaller;
+     }
+
+     footer #top .column a {
+        font-size: smaller; 
+     }
+
+     footer #top .languages p {
+        font-size: smaller;
+     }
+
+}
