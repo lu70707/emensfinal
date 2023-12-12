@@ -39,40 +39,42 @@
                 <h3>- Izračunati emisije</h3>
                 <h3>- Izvještavati u skladu s regulaicijama</h3>
             </div>
-            <form action = "php/proccessDemo.php" method = "post" enctype = "text/plain">
+            <form action="php/proccessDemo.php" method="post" enctype="text/plain">
                 <div class="name">
                     <label for="name">Ime *</label>
-                    <input type="text" name="name" id="name" required>
+                    <input type="text" name="name" id="name" required style="font-size: 17px;">
                 </div>
                 <div class="surname">
                     <label for="surname">Prezime *</label>
-                    <input type="text" name="surname" id="surname" required>
+                    <input type="text" name="surname" id="surname" required style="font-size: 17px;">
                 </div>
                 <div class="email">
                     <label for="email">Email *</label>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" name="email" id="email" required style="font-size: 17px;">
                 </div>
                 <div class="company">
                     <label for="comapny">Tvrtka *</label>
-                    <input type="text" name="company" id="company" required>
+                    <input type="text" name="company" id="company" required style="font-size: 17px;">
                 </div>
                 <div class="country">
                     <label for="country">Zemlja *</label>
-                    <input type="text" list="countries" name="country" id="country" required>
+                    <input type="text" list="countries" name="country" id="country" required style="font-size: 17px;">
                     <datalist id="countries"></datalist>
+                </div>
     
                 </div>
                 <div class="employees">
                     <label for="employees">Broj Zaposlenih *</label>
-                    <select id="employees" name="employees" required>
-                      <option value="blank"></option>
-                      <option value="10">do 10</option>
-                      <option value="50">10 do 50</option>
-                      <option value="200">50 do 200</option>
-                      <option value="500">200 do 500</option>
-                      <option value="plus">od 500</option>
+                    <select id="employees" name="employees" required style="font-size: 17px;">
+                        <option value="blank"></option>
+                        <option value="10">do 10</option>
+                        <option value="50">10 do 50</option>
+                        <option value="200">50 do 200</option>
+                        <option value="500">200 do 500</option>
+                        <option value="plus">od 500</option>
                     </select>
                 </div>
+                
                 <div class="about">
                     <label for="about">Recite nam više o svojoj tvrtki.</label>
                     <textarea name="about" id="about" placeholder="..." required></textarea>
@@ -85,7 +87,7 @@
                     <input type="submit" value="Pošalji" id="greenbutton" style = "font-size:17px">
                 </div>
                 <div class="agreement">
-                    <p>Klikom na “Pošalji”, prihvaćate naš<a href="#">Privacy Policy</a></p>
+                    <p>Klikom na “Pošalji”, prihvaćate našu<a href="#"> Politiku privatnosti</a></p>
                 </div>
             </form>
         </section>

@@ -188,7 +188,9 @@ header {
     font-size: var(--17-px);
     line-height: normal;
     overflow: hidden;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8)    ;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .navbar {
@@ -290,17 +292,21 @@ header span {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-   .nav-menu {
+    .nav-menu {
         position: fixed;
         left: -100%;
         top: 4.5rem;
+        padding-bottom: 1vh;
         gap: 0;
         flex-direction: column;
-        text-align: left;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.8)    ;    ;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         width: 100%;
         transition: 0.3s;
+        border-bottom: 1px solid var(--emens-green);
     }
+
 
     .nav-item {
         margin: 1.69vh 0;
@@ -597,6 +603,7 @@ header span {
     
     #essential .content h2 {
         width: 100%;
+        font-size: 48px;
     }
     
     #essential .content h5 {
@@ -809,6 +816,7 @@ header span {
     
     #professional .content h2 {
         width: 100%;
+        font-size: 48px;
     }
 
     #professional .content h5 {
@@ -1080,6 +1088,7 @@ header span {
     
     #enterprise .content h2 {
         width: 100%;
+        font-size: 48px;
     }
 
     #enterprise .content h5 {
@@ -1256,6 +1265,10 @@ footer #bottom {
     justify-content: center;
     margin-top: 8.35vh;
     padding-bottom: 4.18vh;
+}
+
+footer #bottom p{
+    color: var(--emens-green);
 }
 
 @media(max-width: 935px) {

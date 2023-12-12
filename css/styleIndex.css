@@ -170,7 +170,9 @@ header {
     font-size: var(--17-px);
     line-height: normal;
     overflow: hidden;
-    background-color: var(--emens-green);
+    background-color: rgba(27, 89, 41, 0.8)    ;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .navbar {
@@ -263,6 +265,7 @@ header span {
 
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
+        
     }
 
     .hamburger.active .bar:nth-child(1) {
@@ -277,11 +280,15 @@ header span {
         position: fixed;
         left: -100%;
         top: 4.5rem;
+        padding-bottom: 1vh;
         gap: 0;
         flex-direction: column;
-        background-color: var(--emens-green);
+        background-color: rgba(27, 89, 41, 0.8)    ;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         width: 100%;
         transition: 0.3s;
+        border-bottom: 1px solid white;
     }
 
     .nav-item {
