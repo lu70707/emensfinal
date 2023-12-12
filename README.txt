@@ -1,3 +1,3 @@
 #emens
 
-This is a website for our emission calculating software.
+This is a website for our emission calculation software.
